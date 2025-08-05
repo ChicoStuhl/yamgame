@@ -1,0 +1,28 @@
+/* GameScreen Component Styles */
+
+.game-screen-container {
+  width: 100%;
+}
+
+.game-player-info {
+  color: white;
+  font-size: 1rem;
+}
+
+.game-score-button {
+  background-color: #2196F3;
+}
+
+.game-actions {
+  margin-top: 2rem;
+}
+
+.game-reset-button {
+  background-color: #f44336;
+}
+
+@media (max-width: 768px) {
+  .game-player-info {
+    font-size: 0.9rem;
+  }
+}

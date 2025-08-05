@@ -1,0 +1,100 @@
+/* BozoGrid Component Styles */
+
+.bozo-grid-container {
+  width: 100%;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-areas: 
+    "grid-0 grid-1 grid-2"
+    "grid-3 grid-4 grid-5"
+    "grid-6 grid-7 grid-8"
+    "grid-9 grid-9 grid-9";
+}
+
+.grid-1 {
+    grid-area: grid-1;
+}
+
+.grid-2 {
+    grid-area: grid-2;
+}
+.grid-3 {
+    grid-area: grid-3;
+}
+.grid-4 {
+    grid-area: grid-4;
+}
+.grid-5 {
+    grid-area: grid-5;
+}
+.grid-6 {
+    grid-area: grid-6;
+}
+.grid-7 {
+    grid-area: grid-7;  
+}
+.grid-8 {
+    grid-area: grid-8;
+}
+.grid-9 {
+    grid-area: grid-9;
+    text-align: center;
+}
+
+.bozo-grid-label {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-bottom: 0.2rem;
+}
+
+.bozo-grid-score {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.score-modal-title {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.score-options-container {
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.score-option-button {
+  margin: 0.5rem;
+  font-size: 1.1rem;
+  min-width: 60px;
+}
+
+.score-option-button.cross {
+  background-color: #f44336;
+}
+
+.score-option-button.normal {
+  background-color: #4CAF50;
+}
+
+.score-modal-cancel {
+  margin-top: 1rem;
+  background-color: #666;
+}
+
+@media (max-width: 768px) {
+  .bozo-grid-label {
+    font-size: 0.7rem;
+  }
+  
+  .bozo-grid-score {
+    font-size: 1rem;
+  }
+  
+  .score-option-button {
+    margin: 0.3rem;
+    font-size: 1rem;
+    min-width: 50px;
+  }
+}

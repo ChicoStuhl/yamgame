@@ -1,0 +1,45 @@
+/* PlayerSetup Component Styles */
+
+.player-setup-container {
+  width: 100%;
+}
+
+.player-count-button {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+.player-name-form {
+  width: 100%;
+}
+
+.player-name-container {
+  width: 100%;
+  max-width: 300px;
+}
+
+.player-name-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.start-game-button {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  background-color: #4CAF50;
+}
+
+.back-button {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  background-color: #f44336;
+}
+
+@media (max-width: 768px) {
+  .player-count-button {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+  }
+}

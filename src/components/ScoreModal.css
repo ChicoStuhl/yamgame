@@ -1,0 +1,21 @@
+/* ScoreModal Component Styles */
+
+.score-modal-container {
+  width: 100%;
+}
+
+.score-modal-title {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.score-modal-close {
+  margin-top: 1rem;
+  background-color: #2196F3;
+}
+
+@media (max-width: 768px) {
+  .score-modal-title {
+    font-size: 1.1rem;
+  }
+}
