@@ -15,11 +15,13 @@ const GRID_CONFIG = [
   { id: 9, label: 'General', type: 'victory', options: [40, 'vitória'] }  // Casa especial: 40 ou vitória
 ]
 
-function BozoGrid({ playerData, onScoreUpdate }) {
+function BozoGrid({ playerData, onScoreUpdate, isViewingMode = false }) {
   const [selectedCell, setSelectedCell] = useState(null)
   const [showScoreOptions, setShowScoreOptions] = useState(false)
 
   const handleCellClick = (cellId) => {
+    if (isViewingMode) return // Não permitir cliques no modo de visualização
+    
     if (playerData.scores[cellId] !== null) {
       return // Célula já preenchida
     }
@@ -64,9 +66,17 @@ function BozoGrid({ playerData, onScoreUpdate }) {
 
   const getCellClass = (cellId) => {
     const score = playerData.scores[cellId]
-    if (score === null) return 'grid-cell'
-    if (score === 0) return 'grid-cell crossed'
-    return 'grid-cell filled'
+    let baseClass = 'grid-cell'
+    
+    if (score === null) {
+      baseClass += isViewingMode ? ' viewing-mode' : ''
+    } else if (score === 0) {
+      baseClass += ' crossed'
+    } else {
+      baseClass += ' filled'
+    }
+    
+    return baseClass
   }
 
   return (

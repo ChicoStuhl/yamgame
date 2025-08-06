@@ -54,6 +54,17 @@
   font-weight: bold;
 }
 
+.grid-cell.viewing-mode {
+  cursor: default !important;
+  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.grid-cell.viewing-mode:hover {
+  transform: none !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
 .score-modal-title {
   margin-bottom: 1rem;
   color: #333;

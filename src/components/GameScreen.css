@@ -4,9 +4,128 @@
   width: 100%;
 }
 
+.viewing-mode-banner {
+  background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.viewing-mode-text {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.exit-viewing-button {
+  background-color: white;
+  color: #333;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.exit-viewing-button:hover {
+  background-color: #f0f0f0;
+}
+
+.game-screen-container .player-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: none;
+}
+
+.game-screen-container .nav-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+}
+
+.game-screen-container .nav-button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.game-screen-container .nav-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.undo-button {
+  background-color: #FF9800;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.undo-button:hover:not(:disabled) {
+  background-color: #f57c00;
+}
+
+.undo-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.next-turn-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.next-turn-button:hover {
+  background-color: #45a049;
+}
+
 .game-player-info {
   color: white;
   font-size: 1rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  min-width: 200px;
 }
 
 .game-score-button {
@@ -22,7 +141,32 @@
 }
 
 @media (max-width: 768px) {
+  .viewing-mode-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .viewing-mode-text {
+    font-size: 1rem;
+  }
+  
+  .game-screen-container .player-navigation {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .game-screen-container .nav-button, .undo-button, .next-turn-button {
+    width: 200px;
+  }
+  
   .game-player-info {
     font-size: 0.9rem;
+    min-width: auto;
+    width: 100%;
   }
 }
